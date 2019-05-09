@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Index1";
+    Layout = null;
+    Array data = (Array)ViewData["msg"];
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=divice-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @{ 
+            string xm = "";
+            string info = "";
+            if(data.GetValue(2).ToString()=="张三")
+            {
+                xm = data.GetValue(2).ToString() + "(管理员)";
+            }
+            else if(data.GetValue(2).ToString()!="")
+            {
+                xm = data.GetValue(2).ToString() + "(普通用户)";
+            }
+            if(Request.QueryString["id"]!=null)
+            {
+                info = "员工编号：" + Request.QueryString["id"].ToString();
+            }
+        }
+        姓名：@xm<br/ >
+        电话：@data.GetValue(3).ToString()<br />
+        @info
+    </div>
+</body>
+</html>
+<h2>Index1</h2>
+

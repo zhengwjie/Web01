@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = null;
+    Array data = (Array)ViewData["d"];
+    ViewBag.Title = "Index";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=divice-width" />
+    <title>简单MVC示例 </title>
+    <style type="text/css">
+        table {
+            border: 1px solid Silver;
+            border-collapse: collapse;
+            width: 320px;
+            text-align: center;
+            margin: auto
+        }
+        tr{height:30px}
+        th{border:1px solid silver; padding:10px}
+        td {
+            border: 1px solid silver;
+            padding: 10px
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>姓名</th><th>性别</th>
+                    <th>单位</th><th>联系电话</th>
+                </tr>
+                <tr>
+                    <td>@data.GetValue(0)</td>
+                    <td>@data.GetValue(1)</td>
+                    <td>@data.GetValue(2)</td>
+                    <td>@data.GetValue(3)</td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+</body>
+</html>
+

@@ -1,0 +1,42 @@
+﻿@using Web01.Models;
+
+@{
+    ViewBag.Title = "GetComments";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Comments
+    </title>
+     <script>
+
+     </script>
+</head>
+<body style="background-color:lightblue">
+    <h4 >一共查询到 @ViewData.Model.Count  条评论</h4>
+    <div>
+        @foreach(Comment c in ViewData.Model as List<Comment>)
+        {
+        <div>
+            <div id="id" style="border:1px solid #999;padding:10px;border-color:blue;border-radius:15px 15px 15px 15px;
+                     background-color:aliceblue" >
+                        
+                <img src="~/images/pic01.jpg" height="30" width="30" />
+                @c.Author
+            </div>
+            <div style="background-color:beige">@c.Text</div>
+        </div>
+        <hr />
+        }
+    </div>
+    <h4>添加评论</h4>
+    <form  action="~/Scripts/demo1/test02.js" id="form01">
+        Author:<input type="text" id="Author" />
+        Comment:<input type="text" id="Comment"/>
+        <button type="submit" onclick="post01()" >提交</button>
+    </form>
+</body>
+
+</html>
+

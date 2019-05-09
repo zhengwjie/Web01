@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Second";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Second</title>
+</head>
+<body>
+    <div>
+        @ViewData["msg"]<br /><br />
+        @Html.RouteLink("RouteLink生成的超链接",new { controller="Home",action="First"})
+    </div>
+</body>
+</html>
+<h2>Second</h2>
+
