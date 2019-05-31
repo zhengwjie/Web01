@@ -10,11 +10,11 @@
 ##  查询id
   ![](images/png2.png)
 ##  查看所有的评论
-  ![](images/png2.png)
+  ![](images/png4.png)
 ##  输入添加的评论
-  ![](images/png2.png)
+  ![](images/png5.png)
 ##  点击提交按钮
-  ![](images/png2.png)
+  ![](images/png6.png)
 # 说明
    作业四中有许多Controller，但只有CommentsController是作业四的，别的都是进行测试使用过的，因为设置了路由，对运行不会有影响。
 
