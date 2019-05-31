@@ -1,12 +1,14 @@
 ﻿
 function post01() {
 
-    var comment1 = new Comment(){ ID = 0, Author = $('#Author').val(), Text = $('#Comment').val() };
+    var author01 = $('#Author').val();
+    var text01 = $('#Comment').val();
+    alert(author01);
     $.ajax(
         {
             type: "post",
-            url: "Comments/GetComments",
-            dada: { comment: comment1 }
+            url: "GetComments01",
+            dada: { author: author01, text: text01 }
         })
-    Response.redirect('/Comments/GetComments');
+    //Response.redirect('/Comments/GetComments');
 }

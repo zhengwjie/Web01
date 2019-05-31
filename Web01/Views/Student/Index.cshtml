@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<html>
+<head>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script>
+        function getStudentCount() {
+            $.get("GetStudentCount", { classId: "32" }, function (data, textStatus) {
+                alert(data);
+                if (textStatus == "success") {
+                    $("#divContent").html("<span>" + data + "</span>");
+                    
+                }
+                else {
+                    alert("获取数据异常");
+                }
+            }
+            )
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <input id="btnGetStudentCount" type="button" value="获取学生总数" onclick="getStudentCount()"/>
+        <div id="divContent"></div>
+    </div>
+</body>
+</html>
+

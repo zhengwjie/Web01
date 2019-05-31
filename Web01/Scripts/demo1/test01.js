@@ -1,5 +1,5 @@
 ﻿function tz() {
-    window.location.href = '/Comments/GetComments';
+    window.location.href = '/Comments/GetComments/';
 }
 function tf() {
 

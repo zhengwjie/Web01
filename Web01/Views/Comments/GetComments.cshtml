@@ -10,7 +10,11 @@
         Comments
     </title>
      <script>
-
+         function post02() {
+             var author01 = $("#Author").val();
+             var text01 = $("#Comment").val();
+             window.location.href = "Comments/GetComments/" + author01 + "/" + text01 + "/";
+         }
      </script>
 </head>
 <body style="background-color:lightblue">
@@ -29,15 +33,13 @@
         </div>
         <hr />
         }
-
     </div>
     <h4>添加评论</h4>
-    <form  action="~/Scripts/demo1/test02.js" id="form01">
-        Author:<input type="text" id="Author" />
-        Comment:<input type="text" id="Comment"/>
-        <button type="submit" onclick="post01()" >提交</button>
+    <form   id="form01" action="/Comments/GetComments/" method="post">
+        Author:<input type="text" id="Author" name="author"/>
+        Comment:<input type="text" id="Comment" name="text"/>
+        <button type="submit" >提交</button>
     </form>
 </body>
-
 </html>
 
